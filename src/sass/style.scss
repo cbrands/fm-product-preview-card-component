@@ -7,10 +7,12 @@ $fw-500: 500;
 $fw-700: 700;
 
 $dark-cyan: hsl(158, 36%, 37%);
+$darker-cyan: hsl(158, 36%, 25%);
 $cream: hsl(30, 38%, 92%);
 $very-dark-blue: hsl(212, 21%, 14%);
 $dark-grayish-blue: hsl(228, 12%, 48%);
 $white: hsl(0, 0%, 100%);
+$breakpoint: 800px;
 
 body {
   background-color: $cream;
@@ -27,6 +29,11 @@ body {
   border-radius: 16px;
   display: flex;
   flex-direction: column;
+  @media (min-width: $breakpoint){
+    flex-direction: row;
+    margin: 1.75rem auto;
+    max-width: 600px;
+  }
 }
 
 .main-image {
@@ -37,11 +44,25 @@ body {
     border-top-left-radius: 16px;
     border-top-right-radius: 16px;
 
+    @media (min-width: $breakpoint){
+      border-top-right-radius: 0;
+      border-bottom-left-radius: 16px;
+      height: 100%;
+    }
+  }
+
+  @media (min-width: $breakpoint){
+    width: 50%;
+    height: 100%;
   }
 }
 
 .card {
+  width: 100%;
   padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   &__type {
     letter-spacing: 5px;
     font-size: $fs-300;
@@ -79,6 +100,10 @@ body {
       margin: 0 auto;
     }
   }
+
+  @media (min-width: $breakpoint){
+    width: 50%;
+  }
 }
 
 .btn {
@@ -96,6 +121,15 @@ body {
 
   &__icon {
     margin-right: 0.5rem;
+  }
+
+  &:focus {
+    background-color: $darker-cyan;
+  }
+
+  &:hover {
+    cursor: pointer;
+    background-color: $darker-cyan;
   }
 }
 
