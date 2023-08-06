@@ -1,0 +1,104 @@
+$ff-fraunces: 'Fraunces', serif;
+$ff-montserrat: 'Montserrat', sans-serif;
+$fs-300: 0.75rem;
+$fs-400: 0.875rem;
+$fs-700: 2rem;
+$fw-500: 500;
+$fw-700: 700;
+
+$dark-cyan: hsl(158, 36%, 37%);
+$cream: hsl(30, 38%, 92%);
+$very-dark-blue: hsl(212, 21%, 14%);
+$dark-grayish-blue: hsl(228, 12%, 48%);
+$white: hsl(0, 0%, 100%);
+
+body {
+  background-color: $cream;
+  font-family: $ff-montserrat;
+  font-size: $fs-400;
+  font-weight: $fw-500;
+  line-height: 1.6;
+  color: $dark-grayish-blue;
+}
+
+.container {
+  margin: 1.75rem 1rem;
+  background-color: $white;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-image {
+  width: 100%;
+
+  &, img {
+    width: 100%;
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+
+  }
+}
+
+.card {
+  padding: 1.5rem;
+  &__type {
+    letter-spacing: 5px;
+    font-size: $fs-300;
+    font-weight: $fw-500;
+    text-transform: uppercase;
+    margin-bottom: 0.75rem;
+  }
+
+  &__title {
+    font-family: $ff-fraunces;
+    color: $very-dark-blue;
+    font-size: $fs-700;
+    font-weight: $fw-700;
+    line-height: 1;
+    margin-bottom: 1rem;
+  }
+
+  &__text {
+    line-height: 2;
+    margin-bottom: 1.5rem;
+  }
+
+  &__price {
+    display: flex;
+    align-items: center;
+    &--new-price{
+      font-family: $ff-fraunces;
+      font-size: $fs-700;
+      font-weight: $fw-700;
+      color: $dark-cyan;
+      margin-right: 1.125rem;
+    }
+    &--old-price {
+      text-decoration: line-through;
+      margin: 0 auto;
+    }
+  }
+}
+
+.btn {
+  font-weight: $fw-700;
+  background-color: $dark-cyan;
+  color: $white;
+  border: none;
+  border-radius: 16px;
+  width: 100%;
+  padding: 1rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1.125rem;
+
+  &__icon {
+    margin-right: 0.5rem;
+  }
+}
+
+a {
+  text-decoration: none;
+}
